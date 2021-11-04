@@ -1,0 +1,24 @@
+remova todos os pacotes instalados
+
+- sudo apt-get remove mysql-server mysql-client mysql-common
+
+
+Remova os arquivos de dependências que não são mais necessários e, 
+em seguida, remova as versões antigas dos arquivos de pacotes.
+
+- sudo apt-get autoremove
+
+- sudo apt-get autoclean
+
+
+remova os arquivos do mysql que podem ter ficado para trás
+
+- sudo rm -rf /var/lib/mysql
+
+- sudo rm -rf /etc/mysql
+
+
+
+erros instalção ou desistalação 
+
+https://cursos.alura.com.br/forum/topico-erro-de-dependencia-ao-instalar-mysql-server-83591

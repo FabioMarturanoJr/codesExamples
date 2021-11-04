@@ -1,0 +1,24 @@
+verifica Status 
+
+- sudo systemctl status mysql
+
+
+iniciar 
+
+- systemctl start mysql
+
+
+parar
+
+- systemctl stop mysql
+
+
+desativar inicio automatico 
+
+- sudo systemctl disable mysql
+
+
+
+ativar inicio automatico
+
+- sudo systemctl enable mysql

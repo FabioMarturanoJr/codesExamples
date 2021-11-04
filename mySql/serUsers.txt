@@ -1,0 +1,29 @@
+configurar a segurança
+
+- sudo mysql_secure_installation
+
+
+acessar o mysql pelo CLI
+
+- sudo mysql -u root -p
+
+
+criar usuário
+
+- CREATE USER 'fabio'@'localhost' IDENTIFIED BY '';
+
+
+dar todos previlégios em todas as tabelas ao novo usuário
+
+- GRANT ALL PRIVILEGES ON *.* TO 'fabio'@'localhost';
+
+
+atualiza os previlégios
+
+- FLUSH PRIVILEGES
+
+
+logal com o novo usuários
+
+- mysql -u fabio -p
+

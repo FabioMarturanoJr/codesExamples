@@ -1,0 +1,23 @@
+Atualize os pacotes
+
+- sudo apt update
+
+
+Instale o mysql-server
+
+- sudo apt install mysql-server
+
+
+workbench
+
+https://dev.mysql.com/downloads/workbench/
+
+
+instalar .deb
+
+- sudo apt install ./nome-do-arquivo
+
+
+erros instalção ou desistalação 
+
+https://cursos.alura.com.br/forum/topico-erro-de-dependencia-ao-instalar-mysql-server-83591
