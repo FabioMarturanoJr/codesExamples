@@ -1,0 +1,23 @@
+Pare sua instância do mongodb:
+
+- sudo service mongod stop
+
+
+remova todos os pacotes instalados:
+
+- sudo apt-get purge mongodb-org*
+
+
+remova os arquivos de dependências que não são mais necessários.
+Em seguida, remova as versões antigas dos arquivos de pacotes
+
+- sudo apt-get autoremove
+
+- sudo apt-get autoclean
+
+
+remova os arquivos do mongodb que podem ter ficado para trás.
+
+- sudo rm -rf /var/log/mongodb
+
+- sudo rm -rf /var/lib/mongodb

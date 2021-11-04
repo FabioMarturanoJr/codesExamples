@@ -1,0 +1,23 @@
+importar chave pública GPG do MongoDB
+
+- wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+
+
+erro indicando que gnupg não está instalado, Instalar o gnupg e as bibliotecas
+
+- sudo apt-get install gnupg
+
+
+Crie o arquivo /etc/apt/sources.list.d/mongodb-org-4.4.list para o Ubuntu 
+
+- echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+
+
+Atualize o banco de dados local de pacotes
+
+- sudo apt-get update
+
+
+Instale os pacotes do MongoDB
+
+- sudo apt-get install -y mongodb-org

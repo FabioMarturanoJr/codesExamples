@@ -1,0 +1,33 @@
+Iniciando o MongoDB
+
+- sudo service mongod start
+
+
+Status MongoDB
+
+- sudo service mongod status
+
+
+Parando a instância
+
+- sudo service mongod stop
+
+
+Reiniciando a instância
+
+- sudo service mongod restart
+
+
+início automático quando ligar o computador
+
+- sudo systemctl enable mongod.service
+
+
+desativar o início automático
+
+- sudo systemctl disable mongod.service
+
+
+instalação mongoSh
+
+https://docs.mongodb.com/mongodb-shell/install/#std-label-mdb-shell-install
