@@ -1,0 +1,19 @@
+npm init -y
+npm install sequelize
+npm install sequelize-cli
+npm install mysql2
+
+npx sequelize-cli init - incia o sequelize no projeto
+npx sequelize db:create - criar do db com base no arquivo de config.js
+npx sequelize model:generate --name User --attributes fullName:string - cria o model e o migration equivalente
+npx sequelize db:migrate - sobre os migrations no db
+npx sequelize db:migrate:undo - reverte o migration
+npx sequelize migration:generate --name add-column-phone-table-users - altera tabelas existentes
+npx sequelize db:migrate
+
+npx sequelize seed:generate --name users - criar seeds
+
+npx sequelize db:seed:all - polula o db com as seeds
+npx sequelize db:seed:undo:all - reverte as seeds
+
+npm install dotenv
