@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <body>
+    <h1>FORMULÁRIO</h1>
+    <form action="" method="get">
+      <label for="inpuText">coloque um texto: </label>
+      <input type="text" placeholder="digite oq vc esta pensando" required name="texto" id="inpuText">
+      <button type="submit">Enviar</button>
+      <br><br>
+      <textarea name="pensamento" id="inputArea" cols="30" rows="5" maxlength="50">Texto inicial text</textarea>
+      <br><br>
+      <input type="checkbox" value="pizza" name="foods" id="food-1" checked>Pizza
+      <input type="checkbox" value="hotDog" name="foods" id="food-2" >Cachorro Quente
+      <input type="checkbox" value="choco" name="foods" id="food-3" >Chocolate
+      <input type="checkbox" value="iceCream" name="foods" id="food-4" >Sorvete
+      <br><br>
+      <label for="color-1"><input type="radio" name="colors" id="color-1" value="wt">White</label>
+      <label for="color-2"><input type="radio" name="colors" id="color-2" value="bk" checked>Black</label>
+      <label for="color-3"><input type="radio" name="colors" id="color-3" value="rd">Red</label>
+      <label for="color-4"><input type="radio" name="colors" id="color-4" value="gn">Green</label>
+      <br><br>
+      <select name="estador" id="dropEstados">
+        <option value="pr">Paraná</option>
+        <option value="sp">São Paulo</option>
+        <option value="bh" selected>Bahia</option>
+        <option value="mg">Minas Gerais</option>
+      </select>
+      <br><br>
+      <label for="passs">senha</label>
+      <input type="passwords" id="passs" name="passs">
+      <br><br>
+
+    </form>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <input type="file" name="" id="">
+      <br><br>
+    </form>
+    <form action="" method="get">
+      <label for="user">Usuário</label>
+      <br>
+      <input type="text" id="user" name="user" required placeholder="Digite seu email" autofocus>
+      <br><br>
+      <label for="pass">Senha</label>
+      <br>
+      <input type="password" name="pass" id="pass" required placeholder="Digite sua Senha">
+      <br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</body>
+</html>
