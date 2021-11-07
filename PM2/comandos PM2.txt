@@ -1,0 +1,215 @@
+\$ npm install pm2@latest -g
+
+\$ pm2 --version
+
+
+
+\$ pm2 start index.js
+
+\$ pm2 start index.js --name <NOME_DO_PROCESSO>
+
+\$ pm2 stop <NOME_DO_PROCESSO>
+
+
+
+\$ pm2 stop all
+
+
+
+\$ pm2 delete <NOME_DO_PROCESSO>
+
+\$ pm2 restart <NOME_DO_PROCESSO>
+
+\$ pm2 reload <NOME_DO_PROCESSO>
+
+
+
+
+\$ pm2 list
+
+\$ pm2 list --sort name:desc
+
+\$ pm2 show <NOME_DO_PROCESSO>
+
+\$ pm2 logs <NOME_DO_PROCESSO>
+
+\$ pm2 monit
+
+\$ pm2 plus
+
+
+\$ pm2 start index.js --instances 2 --name <NOME_DO_PROCESSO>
+
+\$ pm2 start index.js -i max --name <NOME_DO_PROCESSO>
+
+
+
+\$ pm2 scale <NOME_DO_PROCESSO> 3
+
+    Nesse caso, o número de processos será definido como três. Isso significa que, caso existam menos que três, novos processos serão criados. Se houver mais, serão excluídos processos para totalizar o "três" passado como parâmetro.
+
+\$ pm2 scale <NOME_DO_PROCESSO> +3
+    Aqui, serão adicionados três novos processos além dos que já estão em execução.
+
+
+\$ pm2 [start|restart|stop|delete] ecosystem.config.js
+
+Javascript
+	module.exports = {
+	  apps: [
+	    {
+	      name: 'app',
+	      script: './index.js'
+	    },
+	    //...
+	  ]
+	};
+
+
+\$ pm2 start ecosystem.config.js || \$ pm2 start index.js --name <NOME_DO_PROCESSO>
+
+
+
+YAML
+
+	apps:
+
+	- name: app
+	  script: ./index.js
+
+
+Multiaplicativos
+
+	apps:
+
+	- name: app-1
+	  script: .app-1/index.js
+	- name: app-2
+	  script: .app-2/index.js
+	- name: app-3
+	  script: .app-3/index.js
+
+
+\$ pm2 start ecosystem.config.yml --only app-1 || \$ pm2 start ecosystem.config.yml --only "app-1,app-2"
+
+
+apps:
+
+- name: app
+  script: ./index.js
+  exec_mode: cluster
+  instances: 4
+
+Perceba o campo exec_mode . Através dele, habilitamos o modo cluster para esse app . A propriedade instances indica o número de processos que será utilizado pela aplicação.
+
+Importante: Ao alterar o arquivo ecosystem , é necessário deletar e iniciar novamente seu projeto do PM2 para que as alterações sejam aplicadas.
+
+
+apps:
+
+- name: app
+  script: ./index.js
+  exec_mode: cluster
+  instances: 4
+  env_prod:
+    ENVIRONMENT: PRODUCTION
+  env_homolog:
+    ENVIRONMENT: HOMOLOG
+
+
+\$ pm2 start ecosystem.config.yml --env homolog
+
+O valor é sempre o nome definido na propriedade do arquivo, sem o prefixo "env_" . 
+
+
+
+
+Auto restart
+
+
+\$ pm2 start index.js --name <NOME_DO_PROCESSO> --max-memory-restart 20M
+
+
+apps:
+
+- name: app
+  script: ./index.js
+  max_memory_restart: 20M
+
+
+\$ pm2 start index.js --name <NOME_DO_PROCESSO> --restart-delay 100
+
+
+apps:
+
+- name: app
+  script: ./index.js
+  restart_delay: 100
+
+
+
+apps:
+
+- name: app
+  script: ./index.js
+  exp_backoff_restart_delay: 100
+
+
+Nesse exemplo, ao ocorrer um erro, o processo vai aguardar 100ms. Durante esse período, o app ficará com status de waiting restart . Caso ocorra um novo erro, ele aguardará mais 150ms e, se o erro se repetir, ele aguarda mais 225ms, e assim por diante:
+Dessa maneira, o delay entre os restarts vai crescendo em um movimento exponencial, chegando no máximo 15000ms .
+
+
+
+Assistindo a Alterações
+
+\$ pm2 start index.js --name <NOME_DO_PROCESSO> --watch
+
+apps:
+
+- name: app
+  script: ./index.js
+  watch: ./
+
+
+
+PM2 com outras linguagens
+
+\$ pm2 start hello-world.py --interpreter=python
+
+
+PM2 com Heroku
+
+
+\$ npm install pm2
+
+
+// ...
+"scripts": {
+  "start": "pm2-runtime start ecosystem.config.yml"
+}
+// ...
+
+apps:
+
+- name: app
+  script: ./index.js
+
+
+Modo Cluster + Heroku
+
+apps:
+
+- name: app
+  script: ./index.js
+  exec_mode: cluster
+  instances: max
+
+
+Modo Cluster + Heroku + Dashboard
+
+
+\$ heroku config:set \
+ PM2_PUBLIC_KEY=CHAVE_PUBLICA \
+ PM2_SECRET_KEY=CHAVE_PRIVADA \
+ PM2_MACHINE_NAME=NOME_DO_SERVER \
+ --app NOME_DO_APP_NO_HEROKU

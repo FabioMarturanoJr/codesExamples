@@ -1,0 +1,47 @@
+1. Instalando o Snapd.
+
+	sudo snap install hello-world
+
+2. Instalando o CLI
+
+	sudo snap install heroku --classic
+
+3. Logando no Heroku
+
+	heroku login
+
+
+git remote add origin git@github.com:FabioMarturanoJr/meu-primeiro-deploy-heroku-.git
+
+heroku create FabioMarturanoJr-bk --remote heroku-homolog
+
+heroku create meu-deploy-de-testes-29302 --remote heroku-homolog
+
+git remote rename heroku heroku-origin
+
+git remote rm heroku
+
+heroku git:remote -a meu-deploy-de-testes-29302 --remote heroku-test
+
+heroku git:remote -a meu-deploy-de-testes-29302 --remote heroku-test
+
+
+git push heroku-origin master
+
+
+
+Gerenciando seus apps
+Após o deploy, seu serviço fica disponível em uma URL do Heroku, e o app pode ser gerenciado pelo CLI. Para listar os serviços que você tem em execução, utilize o comando apps :
+
+	heroku apps
+Para ver os detalhes de um app específico, utilize o comando apps:info :
+
+	heroku apps:info nome-do-seu-app-12345
+Variáveis de ambiente
+
+Caso o seu projeto possua variáveis de ambiente, você pode setá-las utilizando o comando config:set .
+
+	heroku config:set TESTE="texto qualquer" --app nome-do-seu-app-12345
+Para listar as variáveis de ambiente, basta utilizar o comando config .
+
+	heroku config --app nome-do-seu-app-12345
