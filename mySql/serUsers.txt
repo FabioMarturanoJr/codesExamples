@@ -10,12 +10,12 @@ acessar o mysql pelo CLI
 
 criar usuário
 
-- CREATE USER 'fabio'@'localhost' IDENTIFIED BY '';
+- CREATE USER 'test'@'localhost' IDENTIFIED BY '123456';
 
 
 dar todos previlégios em todas as tabelas ao novo usuário
 
-- GRANT ALL PRIVILEGES ON *.* TO 'fabio'@'localhost';
+- GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost';
 
 
 atualiza os previlégios
