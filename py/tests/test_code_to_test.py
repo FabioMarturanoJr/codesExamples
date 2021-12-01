@@ -9,4 +9,4 @@ def test_if_number_is_even():
 
 def test_divide_throws_exception():
     with pytest.raises(ZeroDivisionError, match='division by zero'):
-        divide(10, 1)
+        divide(10, 0)
