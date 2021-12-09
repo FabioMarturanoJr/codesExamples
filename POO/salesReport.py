@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import gzip
 import json
+from csv import DictWriter
 from zipfile import ZipFile
 
 
@@ -89,13 +90,22 @@ class SalesReportJSON(SalesReport):
 
 
 class SalesReportCSV(SalesReport):
-    # Sua implementação vai aqui
-    pass
+    FILE_EXTENSION = '.csv'
+
+    def serialize(self):
+        with open(self.get_export_file_name(), 'w') as file:
+            headers = ["Coluna 1", "Coluna 2", "Coluna 3"]
+            csv_writer = DictWriter(file, headers)
+            csv_writer.writeheader()
+            for item in self.build():
+                csv_writer.writerow(item)
 
 
 # Para testar
 relatorio_de_compras = SalesReportJSON('meu_relatorio_1')
 relatorio_de_vendas = SalesReportJSON('meu_relatorio_2', ZipCompressor)
+relatorio_de_vendas_csv = SalesReportCSV('meu_relatorio_csv', ZipCompressor)
 
-relatorio_de_compras.compress()
-relatorio_de_vendas.compress()
+# relatorio_de_compras.compress()
+# relatorio_de_vendas.compress()
+relatorio_de_vendas_csv.compress()
