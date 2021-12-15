@@ -1,0 +1,22 @@
+install 
+  sudo curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+  sudo chmod +x /usr/local/bin/docker-compose
+
+na raiz do projeto
+  docker-compose build
+
+levantar os serviços
+  docker-compose up
+
+levantar serviços sem shell
+  docker-compose up -d
+
+lista os containers do compose
+  docker-compose ps
+
+para e remove os containers
+  docker-compose down
+
+resetar compose
+  docker-compose restart

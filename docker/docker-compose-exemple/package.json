@@ -1,0 +1,27 @@
+{
+  "name": "docker-compose",
+  "version": "1.0.0",
+  "description": "exemplo projeto com docker compose",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.3",
+    "marko": "^4.4.21",
+    "mongoose": "^4.11.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "docker",
+    "compose"
+  ],
+  "author": "Fabio Marturano",
+  "license": "ISC",
+  "homepage": ""
+}
