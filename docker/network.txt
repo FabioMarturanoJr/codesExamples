@@ -1,0 +1,15 @@
+criar rede
+  docker network create --drive bridge local
+
+conectar container a uma rede
+  docker run -it --name containerName --network local [imageName]
+
+verificar redes existentes
+  docker network ls 
+
+verificar containers em uma rede 
+  docker network inspect local
+
+
+Obs.: só conseguimos fazer isso em redes próprias, redes que criamos, 
+isso não é possível na rede padrão dos containers.

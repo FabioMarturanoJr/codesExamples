@@ -12,19 +12,19 @@ remover images
 executar container
 	# O parâmetro -i indica que queremos um container interativo, o -t indica que queremos anexar o terminal virtual tty do container ao nosso host.
 
-	sudo docker run -i -t || -it [image]
+	docker run -i -t || -it [image]
 
 listar containers execução
-	sudo docker ps
+	docker ps
 
 listar containers execução encerrados
-	sudo docker ps -a
+	docker ps -a
 
 remover containers
-	sudo docker rm [idContaier] || [containerName]
+	docker rm [idContaier] || [containerName]
 
 remover containers execução ou encerrados
-	sudo docker rm $(sudo docker ps -qa)
+	docker rm $(sudo docker ps -qa)
 
 ramover containers exited(0)
 	docker container prune
