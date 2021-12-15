@@ -1,0 +1,10 @@
+informaçoes sobre o container
+  docker inspect
+
+criar volume junto ao container
+  docker run -v '/var/www' ubuntu
+
+definir local para salvar os volumes
+  docker run -it -v '/home/fabio/Documents/dockerVolumes:/var/www' ubuntu
+  docker run -p 8080:3000 -v '/home/fabio/Documents/dockerVolumes/calcBinary:/var/www' -w '/var/www'  node npm start
+  docker run -p 8080:3000 -v '$():/var/www' -w '/var/www'  node npm start
