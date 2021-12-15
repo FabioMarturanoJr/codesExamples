@@ -1,0 +1,50 @@
+baixar imagens
+	docker pull [image]
+
+lista imagens
+	docker images
+
+remover images
+	docker rmi [nomeImage]
+
+
+
+executar container
+	# O parâmetro -i indica que queremos um container interativo, o -t indica que queremos anexar o terminal virtual tty do container ao nosso host.
+
+	sudo docker run -i -t || -it [image]
+
+listar containers execução
+	sudo docker ps
+
+listar containers execução encerrados
+	sudo docker ps -a
+
+remover containers
+	sudo docker rm [idContaier] || [containerName]
+
+remover containers execução ou encerrados
+	sudo docker rm $(sudo docker ps -qa)
+
+ramover containers exited(0)
+	docker container prune
+
+Iniciar container existente
+	docker start [idContaier]
+
+Iniciar container com terminal
+	docker start -a -i || -ai [idContaier]
+
+para container
+	docker stop [idContaier]
+
+
+
+ao executar, dá um nome ao container
+	docker run -d -P --name NOME dockersamples/static-site
+
+define uma porta específica para ser atribuída à porta 80 do container, neste caso 12345
+	docker run -d -p 12345:80 dockersamples/static-site
+
+define uma variável de ambiente AUTHOR com o valor Fulano
+	docker run -d -P -e AUTHOR="Fulano" dockersamples/static-site

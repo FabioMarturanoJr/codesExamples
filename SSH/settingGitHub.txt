@@ -1,0 +1,8 @@
+Entre no seu GitHub e siga os passos abaixo:
+	- No canto superior direito do GitHub , clique na sua foto de perfil e clique em Settings ;
+	- Na barra lateral esquerda, clique em SSH and GPG keys ;
+	- Clique em New SSH key ou Add SSH key ;
+	- No campo Título , adicione um descrição para a nova chave;
+	- Cole sua chave dentro do campo Key ;
+	- Clique em Add SSH key ;
+	- Caso seja solicitado, confirme sua senha do Github.
