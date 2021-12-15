@@ -1,4 +1,4 @@
-ssh-keygen -t rsa -b 4096 -C "fabiocmjor@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "yourEmail@gmail.com"
 
 eval "$(ssh-agent -s)"
 
