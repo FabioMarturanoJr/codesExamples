@@ -1,5 +1,5 @@
 FROM node:latest
-MAINTAINER Fabio Marturano
+LABEL maintainer='Fabio Marturano'
 ENV NODE_ENV=development
 COPY . /var/www
 WORKDIR /var/www

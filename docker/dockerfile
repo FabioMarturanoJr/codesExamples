@@ -1,5 +1,5 @@
 FROM node:latest
-LABEL key="Fabio Marturano"
+LABEL maintainer="Fabio Marturano"
 ENV NODE_ENV=dev
 ENV PORT=3000
 COPY . /var/www
