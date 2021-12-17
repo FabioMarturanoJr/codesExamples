@@ -1,0 +1,18 @@
+A primeira
+  nós devemos projetar sempre um esquema de relação, de modo que ele seja fácil de explicar 
+  o seu significado e que visualmente ou de forma a analisar os dados, qualquer pessoa 
+  que tenha um conhecimento pequeno do negócio consiga entender o que ele está modelando.
+
+
+A Segunda
+  vamos projetar sempre esquemas de relações de modo que nenhuma anomalia de inserção,
+  exclusão ou modificação, esteja presente nas nossas relações.
+
+A Terceira
+  evitar ao máximo possível colocar atributos dentro de uma relação cujos valores 
+  podem ser nulos com bastante frequência.
+
+A Quarta
+  projetar esquemas de relações, de modo que possam ser unidos em condições de igualdade 
+  usando atributos pares que sejam relacionados corretamente, de modo que não seja gerada
+  nenhuma tupla falsa.
