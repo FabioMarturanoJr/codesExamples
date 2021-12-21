@@ -1,0 +1,2 @@
+todos os atributo não pertencentes a chave primaria, 
+tem uma dependencia total com a chave primaria, composta ou não
