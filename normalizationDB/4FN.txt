@@ -1,0 +1,1 @@
+esta na terceira forma normal e não posui dependencia multivalorada

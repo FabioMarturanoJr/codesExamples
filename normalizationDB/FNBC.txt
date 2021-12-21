@@ -1,0 +1,3 @@
+Boyce-Cood
+Toda dependencia funcional não é trivial e o determinante deve ser
+ a chave candidata
