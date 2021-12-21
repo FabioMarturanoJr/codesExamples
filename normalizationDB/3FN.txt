@@ -1,0 +1,1 @@
+se estiver na segunda forma normal e não existir nenhuma dependencia transitiva
