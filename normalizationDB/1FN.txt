@@ -1,0 +1,3 @@
+- cada tupla(celula da tabela) contem o exatamente do valor do seu atributo(coluna)
+- atributo atômico e indivisivel
+- compostos e multivalorados devem criar novas linhas relações a novas tabelas
