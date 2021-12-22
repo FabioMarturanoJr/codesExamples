@@ -1,0 +1,6 @@
+create laravel project with composer 
+  composer create-project --prefer-dist laravel/laravel [nameProject] "5.8.*"
+  composer create-project --prefer-dist laravel/laravel todoList 5.8.*
+
+start server
+  artisan server
