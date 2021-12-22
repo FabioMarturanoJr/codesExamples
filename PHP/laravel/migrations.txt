@@ -1,0 +1,5 @@
+create migration
+  php artisan make:migration create_table_tasks
+
+up migration
+  php artisan migrate

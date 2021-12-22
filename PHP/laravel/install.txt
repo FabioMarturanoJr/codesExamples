@@ -12,3 +12,6 @@ Error ext-dom
   sudo apt-get update
   sudo apt install php-xml
   sudo apt-get install php-mbstring
+
+driver sqlLite
+  sudo apt-get install php-sqlite3
