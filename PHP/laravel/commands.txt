@@ -4,3 +4,7 @@ create laravel project with composer
 
 start server
   artisan server
+
+
+requests
+  php artisan make:request [nameRequest]

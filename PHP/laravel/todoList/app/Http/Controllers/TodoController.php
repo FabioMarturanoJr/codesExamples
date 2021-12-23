@@ -29,14 +29,27 @@ class TodoController extends Controller
 
     public function storeTask(Request $req)
     {
-        $taskName = $req->taskName;
+        $req->validate([
+            'taskName' => 'required|min:79'
+        ]);
 
+        $taskName = $req->taskName;
         $task = Task::create(compact('taskName'));
 
-        $mesage = "Task id {$task->id} created: {$task->taskName}";
+        $mesage = "Task id {$task->id} created: {$taskName}";        
+        $req->session()->flash('mesage', $mesage);
+
+        return redirect()->route('listTask');
+    }
+    
+    public function removeTask(Request $req)
+    {
+        Task::destroy($req->id);
+        
+        $mesage = "Task successfully deleted";
         
         $req->session()->flash('mesage', $mesage);
 
-        return redirect('/todoList');
+        return redirect()->route('listTask');
     }
 }

@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/todoList', 'TodoController@index');
-
-Route::get('/todoList/create', 'TodoController@createTask');
-Route::post('/todoList/create', 'TodoController@storeTask');
+Route::get('/todoList', 'TodoController@index')->name('listTask');
+Route::get('/todoList/create', 'TodoController@createTask')->name('createTask');
+Route::post('/todoList/create', 'TodoController@storeTask')->name('createTask');
+Route::delete('/todoList/{id}', 'TodoController@removeTask')->name('removeTask');
