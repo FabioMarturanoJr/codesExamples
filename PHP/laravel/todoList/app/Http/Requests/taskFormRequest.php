@@ -13,7 +13,7 @@ class taskFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class taskFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'taskName' => 'required|min:79'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            // 'taskName.required' => 'other messagem'
         ];
     }
 }

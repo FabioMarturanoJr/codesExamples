@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Task;
 use Illuminate\Http\Request;
-use PHPUnit\Framework\Test;
+use App\Http\Requests\taskFormRequest;
 
 class TodoController extends Controller
 {
@@ -27,12 +27,8 @@ class TodoController extends Controller
         return view('todo.createTask');
     }
 
-    public function storeTask(Request $req)
+    public function storeTask(taskFormRequest $req)
     {
-        $req->validate([
-            'taskName' => 'required|min:79'
-        ]);
-
         $taskName = $req->taskName;
         $task = Task::create(compact('taskName'));
 
