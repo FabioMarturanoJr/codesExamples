@@ -1,0 +1,5 @@
+dotnet new [Project Type] -n [ProjectName]
+dotnet new webapp -n webTest
+
+run projetct 
+  dotnet watch run
