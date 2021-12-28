@@ -1,0 +1,15 @@
+/home/fabio/codes/codesExamples/dotnet/nacktBank/bin/Debug/net6.0/nacktBank
+/home/fabio/codes/codesExamples/dotnet/nacktBank/bin/Debug/net6.0/nacktBank.deps.json
+/home/fabio/codes/codesExamples/dotnet/nacktBank/bin/Debug/net6.0/nacktBank.runtimeconfig.json
+/home/fabio/codes/codesExamples/dotnet/nacktBank/bin/Debug/net6.0/nacktBank.dll
+/home/fabio/codes/codesExamples/dotnet/nacktBank/bin/Debug/net6.0/ref/nacktBank.dll
+/home/fabio/codes/codesExamples/dotnet/nacktBank/bin/Debug/net6.0/nacktBank.pdb
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/nacktBank.csproj.AssemblyReference.cache
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/nacktBank.GeneratedMSBuildEditorConfig.editorconfig
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/nacktBank.AssemblyInfoInputs.cache
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/nacktBank.AssemblyInfo.cs
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/nacktBank.csproj.CoreCompileInputs.cache
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/nacktBank.dll
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/ref/nacktBank.dll
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/nacktBank.pdb
+/home/fabio/codes/codesExamples/dotnet/nacktBank/obj/Debug/net6.0/nacktBank.genruntimeconfig.cache
