@@ -21,14 +21,14 @@
             fabioAcount.owner = fabio;
             brunaAcount.owner = bruna;
 
-            fabioAcount.balance = 600;
-            brunaAcount.balance = 100;
+            fabioAcount.Balance = 300;
+            brunaAcount.Balance = 600;
 
-            System.Console.WriteLine(brunaAcount.balance);
-            System.Console.WriteLine(fabioAcount.balance);
+            System.Console.WriteLine(brunaAcount.Balance);
+            System.Console.WriteLine(fabioAcount.Balance);
             System.Console.WriteLine(fabioAcount.Transfer(300,brunaAcount));
-            System.Console.WriteLine(brunaAcount.balance);
-            System.Console.WriteLine(fabioAcount.balance);
+            System.Console.WriteLine(brunaAcount.Balance);
+            System.Console.WriteLine(fabioAcount.Balance);
         }
     }
 }

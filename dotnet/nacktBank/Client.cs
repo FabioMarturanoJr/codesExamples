@@ -2,8 +2,8 @@ namespace nacktBank
 {
     public class Client
     {
-        public string name;
-        public string cpf;
-        public string occupation;
+        public string name = "Non-filled";
+        public string cpf = "Non-filled";
+        public string occupation = "Non-filled";
     }
 }

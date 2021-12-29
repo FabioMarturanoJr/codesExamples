@@ -1,10 +1,14 @@
 namespace nacktBank
 {
-    public class CurrentAccount{
-        public Client owner;
+    public class CurrentAccount {
+        public Client owner = new Client();
         public int agencyNumb;
         public int accountNumb;
-        public double balance;
+        private double balance;
+        public double Balance {
+            get { return balance; }
+            set { if (value >= 0) balance = value; }
+        }        
         public bool Withdraw(double value) {
             if(this.balance == 0 ||this.balance < value) return false;
             this.balance -= value;
