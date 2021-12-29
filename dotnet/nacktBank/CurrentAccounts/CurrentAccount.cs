@@ -1,4 +1,4 @@
-namespace nacktBank
+namespace nacktBank.CurrentAccounts
 {
     public class CurrentAccount {
         public CurrentAccount(int agencyNumb, int accountNumb) {
