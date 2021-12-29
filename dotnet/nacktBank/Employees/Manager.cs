@@ -1,13 +1,9 @@
 namespace nacktBank.Employees
 {
-    public class Manager
+    public class Manager : Employee
     {
-        public string? Name { get; set; }
-        public string? CPF { get; set; }
-        public int Salary { get; set; }
-        
-        public double GetBonus() {
-            return Salary;
+        public override double GetBonus() {
+            return Salary + base.GetBonus();
         }
     }
 }

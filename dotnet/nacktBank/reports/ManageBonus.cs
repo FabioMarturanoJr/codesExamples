@@ -9,10 +9,6 @@ namespace nacktBank.reports
         public void Register(Employee employee) {
             _totalBonus += employee.GetBonus();
         }
-        public void Register(Manager manager) {
-            _totalBonus += manager.GetBonus();
-        }
-
         public double getTotalBonus() {
             return _totalBonus;
         }

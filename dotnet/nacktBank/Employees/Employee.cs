@@ -6,7 +6,7 @@ namespace nacktBank.Employees
         public string? CPF { get; set; }
         public int Salary { get; set; }
         
-        public double GetBonus() {
+        public virtual double GetBonus() {
             return Salary * 0.10;
         }
     }
