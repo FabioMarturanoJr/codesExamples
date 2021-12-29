@@ -2,3 +2,10 @@
 __pycache__
 .vscode
 webTest
+
+dotnet/nacktBank/bin/Debug/net6.0/nacktBank.dll
+dotnet/nacktBank/bin/Debug/net6.0/nacktBank.pdb
+dotnet/nacktBank/bin/Debug/net6.0/ref/nacktBank.dll
+dotnet/nacktBank/obj/Debug/net6.0/ref/nacktBank.dll
+dotnet/nacktBank/obj/Debug/net6.0/nacktBank.pdb
+dotnet/nacktBank/obj/Debug/net6.0/nacktBank.dll
