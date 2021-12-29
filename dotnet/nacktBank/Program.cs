@@ -15,8 +15,10 @@
             bruna.CPF = "321321321-0";
             bruna.Occupation = "AssisAdmin";
 
-            CurrentAccount brunaAcount = new CurrentAccount();
-            CurrentAccount fabioAcount = new CurrentAccount();
+            System.Console.WriteLine(CurrentAccount.TotalAccounts);
+            CurrentAccount brunaAcount = new CurrentAccount(4242,123456);
+            CurrentAccount fabioAcount = new CurrentAccount(4242,654321);
+            System.Console.WriteLine(CurrentAccount.TotalAccounts);
 
             fabioAcount.Owner = fabio;
             brunaAcount.Owner = bruna;

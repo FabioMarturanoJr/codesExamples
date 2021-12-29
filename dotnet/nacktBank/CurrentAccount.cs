@@ -1,7 +1,12 @@
 namespace nacktBank
 {
     public class CurrentAccount {
-        // public Client owner = new Client();
+        public CurrentAccount(int agencyNumb, int accountNumb) {
+            AgencyNumb = agencyNumb;
+            AccountNumb = accountNumb;
+            TotalAccounts++;
+        }
+        public static int TotalAccounts { get; private set; }
         public Client Owner { get; set; } = new Client();
         public int AgencyNumb { get; set; }
         public int AccountNumb { get; set; }
