@@ -1,5 +1,5 @@
 .venv
 __pycache__
 .vscode
-dotnet/nacktBank/bin/*
-dotnet/nacktBank/obj/*
+dotnet/nacktBank/bin/
+dotnet/nacktBank/obj/
