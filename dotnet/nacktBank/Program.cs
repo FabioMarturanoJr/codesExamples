@@ -7,28 +7,28 @@
             Client fabio = new Client();
             Client bruna = new Client();
 
-            fabio.name = "Fabio Marturano";
-            fabio.cpf = "123123123-0";
-            fabio.occupation = "Dev";
+            fabio.Name = "Fabio Marturano";
+            fabio.CPF = "123123123-0";
+            fabio.Occupation = "Dev";
 
-            bruna.name = "Bruna Mara";
-            bruna.cpf = "321321321-0";
-            bruna.occupation = "AssisAdmin";
+            bruna.Name = "Bruna Mara";
+            bruna.CPF = "321321321-0";
+            bruna.Occupation = "AssisAdmin";
 
             CurrentAccount brunaAcount = new CurrentAccount();
             CurrentAccount fabioAcount = new CurrentAccount();
 
-            fabioAcount.owner = fabio;
-            brunaAcount.owner = bruna;
+            fabioAcount.Owner = fabio;
+            brunaAcount.Owner = bruna;
 
             fabioAcount.Balance = 300;
             brunaAcount.Balance = 600;
 
-            System.Console.WriteLine(brunaAcount.Balance);
-            System.Console.WriteLine(fabioAcount.Balance);
+            System.Console.WriteLine($"{brunaAcount.Owner.Name} - {brunaAcount.Balance}");
+            System.Console.WriteLine($"{fabioAcount.Owner.Name} - {fabioAcount.Balance}");
             System.Console.WriteLine(fabioAcount.Transfer(300,brunaAcount));
-            System.Console.WriteLine(brunaAcount.Balance);
-            System.Console.WriteLine(fabioAcount.Balance);
+            System.Console.WriteLine($"{brunaAcount.Owner.Name} - {brunaAcount.Balance}");
+            System.Console.WriteLine($"{fabioAcount.Owner.Name} - {fabioAcount.Balance}");
         }
     }
 }

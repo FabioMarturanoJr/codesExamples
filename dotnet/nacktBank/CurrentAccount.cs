@@ -1,21 +1,22 @@
 namespace nacktBank
 {
     public class CurrentAccount {
-        public Client owner = new Client();
-        public int agencyNumb;
-        public int accountNumb;
-        private double balance;
+        // public Client owner = new Client();
+        public Client Owner { get; set; } = new Client();
+        public int AgencyNumb { get; set; }
+        public int AccountNumb { get; set; }
+        private double _balance;
         public double Balance {
-            get { return balance; }
-            set { if (value >= 0) balance = value; }
+            get { return _balance; }
+            set { if (value >= 0) _balance = value; }
         }        
         public bool Withdraw(double value) {
-            if(this.balance == 0 ||this.balance < value) return false;
-            this.balance -= value;
+            if(_balance == 0 ||_balance < value) return false;
+            _balance -= value;
             return true;
         }
         public void Deposit(double value) {
-            this.balance += value;
+            _balance += value;
         }
         public bool Transfer(double value, CurrentAccount destAccount) { 
             if (!this.Withdraw(value)) return false;
