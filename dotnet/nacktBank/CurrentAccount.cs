@@ -1,7 +1,7 @@
 namespace nacktBank
 {
     public class CurrentAccount{
-        public string owner = "User";
+        public Client owner;
         public int agencyNumb;
         public int accountNumb;
         public double balance;

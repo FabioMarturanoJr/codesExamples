@@ -4,24 +4,31 @@
     {
         public static void Main(string[] args)
         {
-            CurrentAccount fabioAccount = new CurrentAccount();
-            CurrentAccount brunaAccount = new CurrentAccount();
+            Client fabio = new Client();
+            Client bruna = new Client();
 
-            fabioAccount.owner = "fabio";
-            fabioAccount.agencyNumb = 4242;
-            fabioAccount.accountNumb = 098765;
-            fabioAccount.balance = 300;
+            fabio.name = "Fabio Marturano";
+            fabio.cpf = "123123123-0";
+            fabio.occupation = "Dev";
 
-            brunaAccount.owner = "bruna";
-            brunaAccount.agencyNumb = 4242;
-            brunaAccount.accountNumb = 198765;
-            brunaAccount.balance = 4300;
+            bruna.name = "Bruna Mara";
+            bruna.cpf = "321321321-0";
+            bruna.occupation = "AssisAdmin";
 
-            System.Console.WriteLine(fabioAccount.balance);
-            System.Console.WriteLine(brunaAccount.balance);
-            System.Console.WriteLine(fabioAccount.Transfer(500,brunaAccount));
-            System.Console.WriteLine(fabioAccount.balance);
-            System.Console.WriteLine(brunaAccount.balance);
+            CurrentAccount brunaAcount = new CurrentAccount();
+            CurrentAccount fabioAcount = new CurrentAccount();
+
+            fabioAcount.owner = fabio;
+            brunaAcount.owner = bruna;
+
+            fabioAcount.balance = 600;
+            brunaAcount.balance = 100;
+
+            System.Console.WriteLine(brunaAcount.balance);
+            System.Console.WriteLine(fabioAcount.balance);
+            System.Console.WriteLine(fabioAcount.Transfer(300,brunaAcount));
+            System.Console.WriteLine(brunaAcount.balance);
+            System.Console.WriteLine(fabioAcount.balance);
         }
     }
 }
