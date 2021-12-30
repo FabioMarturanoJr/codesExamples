@@ -2,7 +2,7 @@ namespace nacktBank.Employees
 {
     public class Manager : Employee
     {
-        public Manager(double salaray, string cpf) : base(salaray, cpf)
+        public Manager(string cpf) : base(5000, cpf)
         {
         }
         public override void IncreaseSalary()
@@ -10,7 +10,7 @@ namespace nacktBank.Employees
             Salary *= 1.15;
         }
         public override double GetBonus() {
-            return Salary + base.GetBonus();
+            return Salary * 0.5;
         }
     }
 }
