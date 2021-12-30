@@ -8,6 +8,8 @@ namespace nacktBank
         public static void Main(string[] args)
         {
             System.Console.WriteLine(CalcBonus());
+            System.Console.WriteLine(Designer.TotalDesigner);
+            System.Console.WriteLine(Designer.TotalEmployees);
         }
 
         private static double CalcBonus()

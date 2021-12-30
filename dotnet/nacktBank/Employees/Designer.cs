@@ -2,8 +2,10 @@ namespace nacktBank.Employees
 {
     public class Designer : Employee
     {
+        public static int TotalDesigner { get; private set; }
         public Designer(string cpf) : base(3000, cpf)
         {
+            TotalDesigner++;
         }
         public override void IncreaseSalary()
         {

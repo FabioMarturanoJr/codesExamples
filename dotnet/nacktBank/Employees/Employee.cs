@@ -1,6 +1,6 @@
 namespace nacktBank.Employees
 {
-    public class Employee
+    public abstract class Employee
     {
         public static int TotalEmployees { get; private set; }
         public string? Name { get; set; }
