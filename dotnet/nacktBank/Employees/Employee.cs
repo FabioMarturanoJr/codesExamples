@@ -12,11 +12,7 @@ namespace nacktBank.Employees
             CPF = cpf;
             Salary = salary;
         }
-        public virtual void IncreaseSalary() {
-            Salary *= 1.1;
-        }
-        public virtual double GetBonus() {
-            return Salary * 0.10;
-        }
+        public abstract void IncreaseSalary();
+        public abstract double GetBonus();
     }
 }
