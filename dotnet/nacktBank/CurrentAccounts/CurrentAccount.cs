@@ -1,3 +1,5 @@
+using nacktBank.CustomExceptions;
+
 namespace nacktBank.CurrentAccounts
 {
     public class CurrentAccount {
@@ -22,18 +24,29 @@ namespace nacktBank.CurrentAccounts
             TotalAccounts++;
             TransactionFee = 30 / TotalAccounts;
         }
-        public bool Withdraw(double value) {
-            if(_balance == 0 ||_balance < value) return false;
+        public void Withdraw(double value) {
+            if(_balance == 0 ||_balance < value) {
+                throw new InsufficientBalanceException("Balance insufficient to withdraw");
+            }
             _balance -= value;
-            return true;
         }
         public void Deposit(double value) {
+            if (value <= 0) {
+                throw new DepositInvalidException($"{nameof(Deposit)} shoud be greater than zero");
+            }
             _balance += value;
         }
-        public bool Transfer(double value, CurrentAccount destAccount) { 
-            if (!this.Withdraw(value)) return false;
-            destAccount.Deposit(value);
-            return true;
+        public void Transfer(double value, CurrentAccount destAccount) {
+            try
+            {
+                this.Withdraw(value);
+                destAccount.Deposit(value);
+                 
+            }
+            catch (Exception)
+            {                
+                throw;
+            }
         }
     }
 }
