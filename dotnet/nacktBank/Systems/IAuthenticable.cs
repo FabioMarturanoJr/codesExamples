@@ -1,7 +1,6 @@
-
 namespace nacktBank.Systems
 {
-    public interface Authenticable
+    public interface IAuthenticable
     {
         bool Authenticate(string password);
     }

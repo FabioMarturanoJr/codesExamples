@@ -2,7 +2,7 @@ using nacktBank.Systems;
 
 namespace nacktBank.Employees
 {
-    public abstract class EmployeeAuthenticable : Employee, Authenticable
+    public abstract class EmployeeAuthenticable : Employee, IAuthenticable
     {
         public string? Password { get; set; }
         protected EmployeeAuthenticable(double salary, string cpf) : base(salary, cpf)

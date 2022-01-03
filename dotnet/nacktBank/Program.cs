@@ -27,7 +27,7 @@ namespace nacktBank
 
             CommercialPartiner dani = new CommercialPartiner();
             dani.Password = "456";
-
+            dani.Name = "Danielle X.";
 
             Developer fabio = new Developer("999.999.999-0");
             fabio.Name = "Fabio Marturano";
