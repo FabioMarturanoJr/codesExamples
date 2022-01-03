@@ -1,6 +1,8 @@
+using nacktBank.Systems;
+
 namespace nacktBank.Employees
 {
-    public class AccountManager : Employee
+    public class AccountManager : Authenticable
     {
         public AccountManager(string cpf) : base(4000, cpf)
         {

@@ -4,7 +4,7 @@ namespace nacktBank.Systems
 {
     public class InternalSistem
     {
-        public bool Login(Manager employee, string password) {
+        public bool Login(Authenticable employee, string password) {
             bool userAuthenticated = employee.Authenticate(password);
 
             if (userAuthenticated) {
