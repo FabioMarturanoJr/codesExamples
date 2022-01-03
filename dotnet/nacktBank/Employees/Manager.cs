@@ -2,7 +2,7 @@ using nacktBank.Systems;
 
 namespace nacktBank.Employees
 {
-    public class Manager : Authenticable
+    public class Manager : EmployeeAuthenticable
     {
         public Manager(string cpf) : base(5000, cpf)
         {

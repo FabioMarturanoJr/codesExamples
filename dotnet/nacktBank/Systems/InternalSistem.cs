@@ -1,11 +1,10 @@
-using nacktBank.Employees;
 
 namespace nacktBank.Systems
 {
     public class InternalSistem
     {
-        public bool Login(Authenticable employee, string password) {
-            bool userAuthenticated = employee.Authenticate(password);
+        public bool Login(Authenticable user, string password) {
+            bool userAuthenticated = user.Authenticate(password);
 
             if (userAuthenticated) {
                 System.Console.WriteLine("Login User");

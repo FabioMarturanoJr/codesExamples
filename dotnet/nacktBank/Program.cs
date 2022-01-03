@@ -1,4 +1,5 @@
 ﻿using nacktBank.Employees;
+using nacktBank.Partners;
 using nacktBank.reports;
 using nacktBank.Systems;
 
@@ -20,7 +21,20 @@ namespace nacktBank
             ravena.Name = "Ravena Amora";
             ravena.Password = "123";
 
-            internalSistem.Login(ravena, "123");
+            AccountManager bruna = new AccountManager("123.654.987-5");
+            bruna.Name = "Bruna Mara";
+            bruna.Password = "321";
+
+            CommercialPartiner dani = new CommercialPartiner();
+            dani.Password = "456";
+
+
+            Developer fabio = new Developer("999.999.999-0");
+            fabio.Name = "Fabio Marturano";
+
+            internalSistem.Login(ravena, "1253");
+            internalSistem.Login(bruna, "321");
+            internalSistem.Login(dani, "987");
 
         }
         public static double CalcBonus()
