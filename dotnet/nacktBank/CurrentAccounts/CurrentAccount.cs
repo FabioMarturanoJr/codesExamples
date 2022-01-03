@@ -4,16 +4,18 @@ namespace nacktBank.CurrentAccounts
         public static double TransactionFee { get; private set; }
         public static int TotalAccounts { get; private set; }
         public Client Owner { get; set; } = new Client();
-        public int AgencyNumb { get; set; }
-        public int AccountNumb { get; set; }
+        public int Agency { get;}
+        public int Account { get; }
         private double _balance;
         public double Balance {
             get { return _balance; }
-            set { if (value >= 0) _balance = value; }
+            set { 
+                if (value >= 0) _balance = value; 
+            }
         }        
-        public CurrentAccount(int agencyNumb, int accountNumb) {
-            AgencyNumb = agencyNumb;
-            AccountNumb = accountNumb;
+        public CurrentAccount(int agency, int account) {
+            Agency = agency;
+            Account = account;
             TotalAccounts++;
             TransactionFee = 30 / TotalAccounts;
         }
