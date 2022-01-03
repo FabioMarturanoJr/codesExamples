@@ -10,7 +10,14 @@ namespace nacktBank
     {
         public static void Main(string[] args)
         {
-            CurrentAccount fabio = new CurrentAccount(4242,123456);
+            try
+            {
+                CurrentAccount fabio = new CurrentAccount(0,0);
+            }
+            catch (System.ArgumentException e)
+            {                
+                System.Console.WriteLine(e.Message);
+            }
             CurrentAccount bruna = new CurrentAccount(4242,1234567);
             System.Console.WriteLine(CurrentAccount.TransactionFee);
             System.Console.WriteLine(CurrentAccount.TotalAccounts);

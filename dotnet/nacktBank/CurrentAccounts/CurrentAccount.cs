@@ -14,6 +14,9 @@ namespace nacktBank.CurrentAccounts
             }
         }        
         public CurrentAccount(int agency, int account) {
+            if ( account <= 0) throw new ArgumentException("shoud be greater than zero", nameof(account));
+            if (agency <= 0) throw new ArgumentException("shoud be greater than zero", nameof(agency)); 
+
             Agency = agency;
             Account = account;
             TotalAccounts++;
