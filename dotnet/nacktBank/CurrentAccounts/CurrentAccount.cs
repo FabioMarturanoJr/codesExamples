@@ -1,11 +1,7 @@
 namespace nacktBank.CurrentAccounts
 {
     public class CurrentAccount {
-        public CurrentAccount(int agencyNumb, int accountNumb) {
-            AgencyNumb = agencyNumb;
-            AccountNumb = accountNumb;
-            TotalAccounts++;
-        }
+        public static double TransactionFee { get; private set; }
         public static int TotalAccounts { get; private set; }
         public Client Owner { get; set; } = new Client();
         public int AgencyNumb { get; set; }
@@ -15,6 +11,12 @@ namespace nacktBank.CurrentAccounts
             get { return _balance; }
             set { if (value >= 0) _balance = value; }
         }        
+        public CurrentAccount(int agencyNumb, int accountNumb) {
+            AgencyNumb = agencyNumb;
+            AccountNumb = accountNumb;
+            TotalAccounts++;
+            TransactionFee = 30 / TotalAccounts;
+        }
         public bool Withdraw(double value) {
             if(_balance == 0 ||_balance < value) return false;
             _balance -= value;
