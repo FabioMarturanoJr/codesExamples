@@ -8,6 +8,8 @@ namespace nacktBank.CurrentAccounts
         public Client Owner { get; set; } = new Client();
         public int Agency { get;}
         public int Account { get; }
+        public int TotalNotAllowedWithdraw { get; private set; }
+        public int TotalNotAllowedDeposit { get; private set; }
         private double _balance;
         public double Balance {
             get { return _balance; }
@@ -26,27 +28,24 @@ namespace nacktBank.CurrentAccounts
         }
         public void Withdraw(double value) {
             if(_balance == 0 ||_balance < value) {
-                throw new InsufficientBalanceException("Balance insufficient to withdraw");
+                TotalNotAllowedWithdraw++;
+                throw new InsufficientBalanceException("Balance insufficient to withdraw", Balance, value);
             }
             _balance -= value;
         }
         public void Deposit(double value) {
             if (value <= 0) {
+                TotalNotAllowedDeposit++;
                 throw new DepositInvalidException($"{nameof(Deposit)} shoud be greater than zero");
             }
             _balance += value;
         }
         public void Transfer(double value, CurrentAccount destAccount) {
-            try
-            {
-                this.Withdraw(value);
-                destAccount.Deposit(value);
-                 
+            if (value <= 0) {
+                throw new ArgumentException("shoud be greater than zero", nameof(value));
             }
-            catch (Exception)
-            {                
-                throw;
-            }
+            Withdraw(value);
+            destAccount.Deposit(value);
         }
     }
 }
