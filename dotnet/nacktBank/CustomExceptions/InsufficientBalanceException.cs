@@ -1,6 +1,6 @@
 namespace nacktBank.CustomExceptions
 {
-    public class InsufficientBalanceException : Exception
+    public class InsufficientBalanceException : FinancialOperationException
     {
         public double Balance { get; }
         public double Value { get; }
@@ -11,6 +11,13 @@ namespace nacktBank.CustomExceptions
         {
             this.Balance = balance;
             this.Value = value;
+        }
+        public InsufficientBalanceException(string? message, Exception? innerException) : base(message, innerException)
+        {
+        }
+
+        public InsufficientBalanceException()
+        {
         }
     }
 }

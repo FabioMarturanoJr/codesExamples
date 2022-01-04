@@ -44,8 +44,19 @@ namespace nacktBank.CurrentAccounts
             if (value <= 0) {
                 throw new ArgumentException("shoud be greater than zero", nameof(value));
             }
-            Withdraw(value);
-            destAccount.Deposit(value);
+            try
+            {
+                Withdraw(value);
+                destAccount.Deposit(value);
+            }
+            catch (InsufficientBalanceException e)
+            {
+                throw new FinancialOperationException("Error Operation withdraw", e);
+            }
+            catch (DepositInvalidException e) {
+                throw new FinancialOperationException("Error Operation deposit", e);
+            }
+
         }
     }
 }

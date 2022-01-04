@@ -19,26 +19,15 @@ namespace nacktBank
                 fabio.Deposit(600);
                 bruna.Deposit(600);
 
-                fabio.Withdraw(601);
+                // fabio.Withdraw(601);
 
-                fabio.Transfer(0, bruna);
+                fabio.Transfer(9000, bruna);
             }
-            catch (System.ArgumentException e)
-            {                
-                System.Console.WriteLine(e.Message);
-                System.Console.WriteLine(e.StackTrace);
-            }
-            catch (InsufficientBalanceException e) {
-                System.Console.WriteLine($"{e.Message} value:{e.Value} balance:{e.Balance}");
-                System.Console.WriteLine(e.StackTrace);
-            }
-            catch (DepositInvalidException e) {
-                System.Console.WriteLine(e.Message);
-                System.Console.WriteLine(e.StackTrace);
-            }
-            catch (Exception e) {
+            catch (FinancialOperationException e) {
                 System.Console.WriteLine($"Unexpected Error: {e.Message}");
                 System.Console.WriteLine(e.StackTrace);
+                // System.Console.WriteLine("=============================");
+                // System.Console.WriteLine(e.InnerException.StackTrace);
             }
             System.Console.WriteLine(CurrentAccount.TransactionFee);
             System.Console.WriteLine(CurrentAccount.TotalAccounts);
