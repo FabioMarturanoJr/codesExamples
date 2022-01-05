@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "NacktBank.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/NacktBank.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NacktBank.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NacktBank.Models/1.0.0": {
+      "type": "project",
+      "path": "../NacktBank.Models/NacktBank.Models.csproj",
+      "msbuildProject": "../NacktBank.Models/NacktBank.Models.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "NacktBank.Models >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/fabio/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/fabio/codes/codesExamples/dotnet/NacktBank/NacktBank.AgencySystem/NacktBank.AgencySystem.csproj",
+      "projectName": "NacktBank.AgencySystem",
+      "projectPath": "/home/fabio/codes/codesExamples/dotnet/NacktBank/NacktBank.AgencySystem/NacktBank.AgencySystem.csproj",
+      "packagesPath": "/home/fabio/.nuget/packages/",
+      "outputPath": "/home/fabio/codes/codesExamples/dotnet/NacktBank/NacktBank.AgencySystem/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/fabio/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "/home/fabio/codes/codesExamples/dotnet/NacktBank/NacktBank.Models/NacktBank.Models.csproj": {
+              "projectPath": "/home/fabio/codes/codesExamples/dotnet/NacktBank/NacktBank.Models/NacktBank.Models.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
