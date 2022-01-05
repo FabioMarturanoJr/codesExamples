@@ -2,6 +2,9 @@ using NacktBank.Models.CustomExceptions;
 
 namespace NacktBank.Models.CurrentAccounts
 {
+    /// <summary>
+    /// Define a current account from the Bank.
+    /// </summary>
     public class CurrentAccount {
         public static double TransactionFee { get; private set; }
         public static int TotalAccounts { get; private set; }
@@ -16,7 +19,12 @@ namespace NacktBank.Models.CurrentAccounts
             set { 
                 if (value >= 0) _balance = value; 
             }
-        }        
+        }
+        /// <summary>
+        /// Create a instance of currente accounts.
+        /// </summary>
+        /// <param name="agency">Represents <see cref="Agency"/> number and shoud be greater than zero</param>
+        /// <param name="account">Represents <see cref="Account"/> number and shoud be greater than zero</param>
         public CurrentAccount(int agency, int account) {
             if ( account <= 0) throw new ArgumentException("shoud be greater than zero", nameof(account));
             if (agency <= 0) throw new ArgumentException("shoud be greater than zero", nameof(agency)); 

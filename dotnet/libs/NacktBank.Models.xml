@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NacktBank.Models</name>
+    </assembly>
+    <members>
+        <member name="T:NacktBank.Models.CurrentAccounts.CurrentAccount">
+            <summary>
+            Define a current account from the Bank.
+            </summary>
+        </member>
+        <member name="M:NacktBank.Models.CurrentAccounts.CurrentAccount.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Create a instance of currente accounts.
+            </summary>
+            <param name="agency">Represents <see cref="P:NacktBank.Models.CurrentAccounts.CurrentAccount.Agency"/> number and shoud be greater than zero</param>
+            <param name="account">Represents <see cref="P:NacktBank.Models.CurrentAccounts.CurrentAccount.Account"/> number and shoud be greater than zero</param>
+        </member>
+    </members>
+</doc>

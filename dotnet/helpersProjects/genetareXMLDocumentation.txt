@@ -1,0 +1,4 @@
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\YourApi.XML</DocumentationFile>
+  </PropertyGroup>
