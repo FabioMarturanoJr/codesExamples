@@ -1,6 +1,6 @@
 namespace NacktBank.Models.helpers
 {
-    public class AuthenticateHelper
+    internal class AuthenticateHelper
     {
         public bool ComparePass(string truePass, string checkPass) {
             return truePass == checkPass;
