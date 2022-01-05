@@ -16,5 +16,12 @@
             <param name="agency">Represents <see cref="P:NacktBank.Models.CurrentAccounts.CurrentAccount.Agency"/> number and shoud be greater than zero</param>
             <param name="account">Represents <see cref="P:NacktBank.Models.CurrentAccounts.CurrentAccount.Account"/> number and shoud be greater than zero</param>
         </member>
+        <member name="M:NacktBank.Models.CurrentAccounts.CurrentAccount.Withdraw(System.Double)">
+            <summary>
+            cash out and update the propert <see cref="P:NacktBank.Models.CurrentAccounts.CurrentAccount.Balance"/>
+            </summary>
+            <exception cref="T:NacktBank.Models.CustomExceptions.InsufficientBalanceException">Where trying witthdraw with <see cref="P:NacktBank.Models.CurrentAccounts.CurrentAccount.Balance"/> zero or <see cref="P:NacktBank.Models.CurrentAccounts.CurrentAccount.Balance"/> lower than value</exception>
+            <param name="value">the valeu shoud be greater than zero end the propert <see cref="P:NacktBank.Models.CurrentAccounts.CurrentAccount.Balance"/> shoud not to be lower  or equal zero</param>
+        </member>
     </members>
 </doc>

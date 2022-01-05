@@ -34,6 +34,11 @@ namespace NacktBank.Models.CurrentAccounts
             TotalAccounts++;
             TransactionFee = 30 / TotalAccounts;
         }
+        /// <summary>
+        /// cash out and update the propert <see cref="Balance"/>
+        /// </summary>
+        /// <exception cref="InsufficientBalanceException">Where trying witthdraw with <see cref="Balance"/> zero or <see cref="Balance"/> lower than <paramref name="value"/></exception>
+        /// <param name="value">the valeu shoud be greater than zero end the propert <see cref="Balance"/> shoud not to be lower  or equal zero</param>
         public void Withdraw(double value) {
             if(_balance == 0 ||_balance < value) {
                 TotalNotAllowedWithdraw++;
