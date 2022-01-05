@@ -1,3 +1,5 @@
+CSPROJ
+
 dicionar referência de projeto:
     dotnet add app/app.csproj reference lib/lib.csproj
 
@@ -6,3 +8,11 @@ Adicionar várias referências de projeto ao projeto no diretório atual:
 
 Adicionar várias referências de projeto usando um padrão de recurso de curinga no Linux/Unix:
     dotnet add app/app.csproj reference **/*.csproj
+
+DLL
+
+  <ItemGroup>
+    <Reference Include="NacktBank.Models">
+      <HintPath>..\libs\NacktBank.Models.dll</HintPath>
+    </Reference>
+  </ItemGroup>
