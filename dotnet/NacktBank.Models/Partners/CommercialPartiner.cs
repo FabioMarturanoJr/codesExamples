@@ -1,6 +1,6 @@
-using nacktBank.Systems;
+using NacktBank.Models.Systems;
 
-namespace nacktBank.Partners
+namespace NacktBank.Models.Partners
 {
     public class CommercialPartiner : IAuthenticable
     {

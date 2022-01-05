@@ -1,4 +1,4 @@
-namespace nacktBank.Systems
+namespace NacktBank.Models.Systems
 {
     public interface IAuthenticable
     {

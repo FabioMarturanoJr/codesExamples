@@ -1,4 +1,4 @@
-namespace nacktBank.CurrentAccounts
+namespace NacktBank.Models.CurrentAccounts
 {
     public class Client
     {

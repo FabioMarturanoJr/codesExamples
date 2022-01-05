@@ -1,0 +1,8 @@
+dicionar referência de projeto:
+    dotnet add app/app.csproj reference lib/lib.csproj
+
+Adicionar várias referências de projeto ao projeto no diretório atual:
+    dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
+
+Adicionar várias referências de projeto usando um padrão de recurso de curinga no Linux/Unix:
+    dotnet add app/app.csproj reference **/*.csproj

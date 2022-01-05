@@ -1,6 +1,6 @@
-using nacktBank.Systems;
+using NacktBank.Models.Systems;
 
-namespace nacktBank.Employees
+namespace NacktBank.Models.Employees
 {
     public class Manager : EmployeeAuthenticable
     {

@@ -1,4 +1,4 @@
-namespace nacktBank.Data
+namespace NacktBank.Models.Data
 {
     public class ReaderFiles : IDisposable
     {

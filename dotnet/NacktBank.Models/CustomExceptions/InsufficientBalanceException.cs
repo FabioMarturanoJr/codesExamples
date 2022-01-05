@@ -1,4 +1,4 @@
-namespace nacktBank.CustomExceptions
+namespace NacktBank.Models.CustomExceptions
 {
     public class InsufficientBalanceException : FinancialOperationException
     {

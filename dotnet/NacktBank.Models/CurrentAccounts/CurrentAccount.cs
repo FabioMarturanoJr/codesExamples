@@ -1,6 +1,6 @@
-using nacktBank.CustomExceptions;
+using NacktBank.Models.CustomExceptions;
 
-namespace nacktBank.CurrentAccounts
+namespace NacktBank.Models.CurrentAccounts
 {
     public class CurrentAccount {
         public static double TransactionFee { get; private set; }

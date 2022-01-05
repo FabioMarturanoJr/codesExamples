@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using NacktBank.Models.CurrentAccounts;
+
+CurrentAccount fabio = new CurrentAccount(123,55324);

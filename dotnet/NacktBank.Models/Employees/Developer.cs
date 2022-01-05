@@ -1,4 +1,4 @@
-namespace nacktBank.Employees
+namespace NacktBank.Models.Employees
 {
     public class Developer : Employee
     {

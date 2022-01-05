@@ -1,5 +1,5 @@
 
-namespace nacktBank.Systems
+namespace NacktBank.Models.Systems
 {
     public class InternalSistem
     {
