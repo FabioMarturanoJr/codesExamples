@@ -1,4 +1,4 @@
-namespace NacktBank.Models.helpers
+namespace NacktBank.Models.Helpers
 {
     // class without access modifier is the same of internal
     class AuthenticateHelper

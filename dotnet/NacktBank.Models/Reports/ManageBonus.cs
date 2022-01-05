@@ -1,6 +1,6 @@
 using NacktBank.Models.Employees;
 
-namespace NacktBank.Models.reports
+namespace NacktBank.Models.Reports
 {
     public class ManageBonus
     {
