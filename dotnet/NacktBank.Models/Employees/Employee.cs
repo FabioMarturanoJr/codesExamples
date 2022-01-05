@@ -13,6 +13,6 @@ namespace NacktBank.Models.Employees
             Salary = salary;
         }
         public abstract void IncreaseSalary();
-        public abstract double GetBonus();
+        internal protected abstract double GetBonus();
     }
 }

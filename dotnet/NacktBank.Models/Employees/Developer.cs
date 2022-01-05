@@ -12,7 +12,7 @@ namespace NacktBank.Models.Employees
         {
             Salary *= 1.3;
         }
-        public override double GetBonus()
+        internal protected override double GetBonus()
         {
             return Salary;
         }
