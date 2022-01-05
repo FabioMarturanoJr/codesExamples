@@ -1,5 +1,3 @@
-using NacktBank.Models.Systems;
-
 namespace NacktBank.Models.Employees
 {
     public class AccountManager : EmployeeAuthenticable

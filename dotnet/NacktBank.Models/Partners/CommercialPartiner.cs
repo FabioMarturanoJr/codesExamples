@@ -1,4 +1,4 @@
-using NacktBank.Models.Systems;
+using NacktBank.Models.Interfaces;
 
 namespace NacktBank.Models.Partners
 {

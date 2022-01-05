@@ -1,4 +1,6 @@
 
+using NacktBank.Models.Interfaces;
+
 namespace NacktBank.Models.Systems
 {
     public class InternalSistem
