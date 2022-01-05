@@ -1,8 +1,7 @@
 .venv
 __pycache__
 .vscode
-dotnet/NacktBank/NacktBank.Models/bin/
-dotnet/NacktBank/NacktBank.Models/obj/
-dotnet/NacktBank/NacktBank.AgencySystem/bin/
-dotnet/NacktBank/NacktBank.AgencySystem/obj/
+dotnet/NacktBank/*/bin/
+dotnet/NacktBank/*/obj/
+
 OtherBank
