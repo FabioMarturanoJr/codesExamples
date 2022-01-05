@@ -12,7 +12,7 @@ namespace nacktBank.Data
         public string ReadNextLine() {
             System.Console.WriteLine("Reading Line...");
             throw new IOException();
-            return "Line from File";
+            // return "Line from File";
         }
         public void Dispose()
         {
