@@ -1,8 +1,28 @@
 ﻿using NacktBank.Models.CurrentAccounts;
 
-CurrentAccount fabio = new CurrentAccount(4242,321654);
+static string getTimeByDay(TimeSpan time) {
+    return time.Days + " days";
+}
 
-fabio.Deposit(800);
-fabio.Withdraw(654);
+static string getTimeByYear(TimeSpan time) {
+    return (time.Days / 365) + " years";
+}
 
-System.Console.WriteLine(fabio.Balance);
+static string getTimeByMonth(TimeSpan time) {
+    return (time.Days / 30) + " months";
+}
+
+static string getTimeByWeek(TimeSpan time) {
+    return (time.Days / 7) + " weeks";
+}
+
+Client fabio = new Client();
+
+DateTime now = DateTime.Now;
+fabio.birthday = new DateTime(1994, 12, 9);
+
+TimeSpan difference = now - fabio.birthday; 
+
+System.Console.WriteLine(fabio.birthday);
+System.Console.WriteLine(now);
+System.Console.WriteLine($"Diff: {getTimeByDay(difference)}, {getTimeByWeek(difference)}, {getTimeByMonth(difference)}, {getTimeByYear(difference)}");
