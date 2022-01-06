@@ -1,28 +1,16 @@
-﻿using NacktBank.Models.CurrentAccounts;
+﻿using Humanizer;
+using NacktBank.Models.CurrentAccounts;
 
 static string getTimeByDay(TimeSpan time) {
-    return time.Days + " days";
+    return TimeSpanHumanizeExtensions.Humanize(time);
 }
-
-static string getTimeByYear(TimeSpan time) {
-    return (time.Days / 365) + " years";
-}
-
-static string getTimeByMonth(TimeSpan time) {
-    return (time.Days / 30) + " months";
-}
-
-static string getTimeByWeek(TimeSpan time) {
-    return (time.Days / 7) + " weeks";
-}
-
 Client fabio = new Client();
 
 DateTime now = DateTime.Now;
-fabio.birthday = new DateTime(1994, 12, 9);
+fabio.AccountExpiration = new DateTime(2023, 1, 9);
 
-TimeSpan difference = now - fabio.birthday; 
+TimeSpan difference =fabio.AccountExpiration - now; 
 
-System.Console.WriteLine(fabio.birthday);
+System.Console.WriteLine(fabio.AccountExpiration);
 System.Console.WriteLine(now);
-System.Console.WriteLine($"Diff: {getTimeByDay(difference)}, {getTimeByWeek(difference)}, {getTimeByMonth(difference)}, {getTimeByYear(difference)}");
+System.Console.WriteLine($"Exp: {getTimeByDay(difference)} left");

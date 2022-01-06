@@ -5,6 +5,6 @@ namespace NacktBank.Models.CurrentAccounts
         public string Name { get; set; } = "Non-filled";
         public string CPF { get; set; } = "Non-filled";
         public string Occupation { get; set; } = "Non-filled";
-        public DateTime birthday { get; set; }
+        public DateTime AccountExpiration { get; set; }
     }
 }

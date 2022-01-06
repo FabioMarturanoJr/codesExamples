@@ -1,0 +1,3 @@
+dotnet add package <PACKAGE_NAME> --version <VERSION>
+
+dotnet add package Humanizer
