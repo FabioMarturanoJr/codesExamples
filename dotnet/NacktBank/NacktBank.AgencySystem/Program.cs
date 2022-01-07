@@ -5,4 +5,4 @@ string URL = "https://www.bytebank.com.br/exchange?originCurrency=real&destinyCu
 extratorArgumentsByUrl urlFull = new extratorArgumentsByUrl(URL);
 
 System.Console.WriteLine(urlFull.Arguments);
-System.Console.WriteLine(urlFull.GetValue("value"));
+System.Console.WriteLine(urlFull.GetValue("batata"));

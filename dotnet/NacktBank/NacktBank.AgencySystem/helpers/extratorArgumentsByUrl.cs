@@ -10,7 +10,7 @@ namespace NacktBank.AgencySystem.helpers
         {
             if (string.IsNullOrEmpty(URL)) throw new ArgumentException($"'{nameof(URL)}' cannot be null or empty.", nameof(URL));
 
-            _URL = URL;
+            _URL = URL.ToLower();
             _arguments = getArguments();
         }
         private string getArguments() {
@@ -19,7 +19,11 @@ namespace NacktBank.AgencySystem.helpers
             return arguments;
         }
         public string GetValue(string paramName) {
-            string term = paramName + "=";
+            string lowerParam = paramName.ToLower();
+
+            if (!_arguments.Contains(lowerParam)) return $"{nameof(paramName)}: {paramName} not found";
+
+            string term = lowerParam + "=";
             int indexTerm = _arguments.IndexOf(term);
             string arg = _arguments.Substring(indexTerm + term.Length);
 
