@@ -1,16 +1,7 @@
-﻿using Humanizer;
-using NacktBank.Models.CurrentAccounts;
+﻿using NacktBank.AgencySystem.helpers;
 
-static string getTimeByDay(TimeSpan time) {
-    return TimeSpanHumanizeExtensions.Humanize(time);
-}
-Client fabio = new Client();
+string URL = "https://www.bytebank.com.br/exchange?originCurrency=real&destinyCurrency=dolar&value=1500";
 
-DateTime now = DateTime.Now;
-fabio.AccountExpiration = new DateTime(2023, 1, 9);
+extratorArgumentsByUrl urlFull = new extratorArgumentsByUrl(URL);
 
-TimeSpan difference =fabio.AccountExpiration - now; 
-
-System.Console.WriteLine(fabio.AccountExpiration);
-System.Console.WriteLine(now);
-System.Console.WriteLine($"Exp: {getTimeByDay(difference)} left");
+System.Console.WriteLine(urlFull.Arguments);
