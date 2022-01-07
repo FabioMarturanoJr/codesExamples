@@ -8,19 +8,26 @@ namespace NacktBank.AgencySystem.helpers
 
         public extratorArgumentsByUrl(string URL)
         {
-            if (string.IsNullOrEmpty(URL))
-            {
-                throw new ArgumentException($"'{nameof(URL)}' cannot be null or empty.", nameof(URL));
-            }
+            if (string.IsNullOrEmpty(URL)) throw new ArgumentException($"'{nameof(URL)}' cannot be null or empty.", nameof(URL));
+
             _URL = URL;
             _arguments = getArguments();
         }
-
         private string getArguments() {
             int separator = _URL.IndexOf('?') + 1;
             string arguments = _URL.Substring(separator);
-
             return arguments;
+        }
+        public string GetValue(string paramName) {
+            string term = paramName + "=";
+            int indexTerm = _arguments.IndexOf(term);
+            string arg = _arguments.Substring(indexTerm + term.Length);
+
+            char nextArg = '&';
+            if (!arg.Contains(nextArg)) return arg;
+
+            int indexNextArq = arg.IndexOf(nextArg);
+            return arg.Remove(indexNextArq);
         }
     }
 }
