@@ -7,8 +7,11 @@ namespace NacktBank.AgencySystem.helpers
         public string Arguments { get { return _arguments; } }
 
         public extratorArgumentsByUrl(string URL)
-        {
-            if (string.IsNullOrEmpty(URL)) throw new ArgumentException($"'{nameof(URL)}' cannot be null or empty.", nameof(URL));
+        {   
+            string startUrl = "https://www.bytebank.com.br/";
+
+            if (string.IsNullOrEmpty(URL)) throw new ArgumentException($"cannot be null or empty.", nameof(URL));
+            if (!URL.StartsWith(startUrl)) throw new ArgumentException($"shoud start with {startUrl}.", nameof(URL));
 
             _URL = URL.ToLower();
             _arguments = getArguments();
@@ -21,7 +24,7 @@ namespace NacktBank.AgencySystem.helpers
         public string GetValue(string paramName) {
             string lowerParam = paramName.ToLower();
 
-            if (!_arguments.Contains(lowerParam)) return $"{nameof(paramName)}: {paramName} not found";
+            if (!_arguments.Contains(lowerParam))throw new ArgumentException($"{nameof(paramName)}: {paramName} not found");
 
             string term = lowerParam + "=";
             int indexTerm = _arguments.IndexOf(term);
