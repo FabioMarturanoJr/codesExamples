@@ -1,0 +1,5 @@
+dotnet ef migrations add Student("Student" add in context and previously created in model)
+    Create Migrations
+
+dotnet ef database update
+    Updates the database to a specified migration

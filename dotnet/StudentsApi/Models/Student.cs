@@ -10,11 +10,11 @@ namespace StudentsApi.Models
         public int Id { get; set; }
         [Required]
         [StringLength(80)]
-        public string Name { get; set; }
+        public string Name { get; set; } = "Student";
         [Required]
         [EmailAddress]
         [StringLength(100)]
-        public string Email { get; set; }
+        public string Email { get; set; } = "email@email.com";
         [Required]
         public int Age { get; set; }
     }

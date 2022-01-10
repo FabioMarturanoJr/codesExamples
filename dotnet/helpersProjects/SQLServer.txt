@@ -1,0 +1,8 @@
+install
+    https://docs.microsoft.com/pt-br/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15
+
+sqlcmd command line
+
+list dbs
+    select name from sys.databases
+    go
