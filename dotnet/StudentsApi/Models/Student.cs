@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentsApi.Models
 {
+    [Table("Students")]
     public class Student
     {
         // dataAnnotations redundante [Key]
