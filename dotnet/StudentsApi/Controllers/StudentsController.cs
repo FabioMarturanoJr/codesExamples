@@ -43,5 +43,64 @@ namespace StudentsApi.Controllers
                 return BadRequest(e.Message);
             }
         }
+        [HttpGet("{id:int}", Name="GetStudent")]
+        public async Task<ActionResult<Student>> GetStudent(int id) {
+            try
+            {
+                var student = await _studentService.GetStudent(id);
+
+                if (student == null)
+                    return NotFound($"Not Found student with id={id}");
+
+                return Ok(student);
+            }
+            catch (System.Exception e)
+            {                
+                return BadRequest($"Invalid Request {e.Message}");
+            }
+        }
+        [HttpPost]
+        public async Task<ActionResult> Create(Student student) {
+            try
+            {
+                await _studentService.CreateStudent(student);
+                return CreatedAtRoute(nameof(GetStudent), new { id = student.Id }, student);
+            }
+            catch (System.Exception e)
+            {                
+                return BadRequest($"Invalid Request {e.Message}");
+            }
+        }
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Edit(int id, [FromBody] Student student) {
+            try
+            {
+                if (student.Id == id) {
+                    await _studentService.UpdateStudent(student);
+                    return Ok($"Student id={id} updated!");
+                }
+                return BadRequest("Inconsistents Data");
+            }
+            catch (System.Exception e)
+            {
+                return BadRequest($"Invalid Request {e.Message}");
+            }
+        }
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id) {
+            try
+            {
+                var student = await _studentService.GetStudent(id);
+                if (student != null) {
+                    await _studentService.DeleteStudent(student);
+                    return Ok($"Student id={id} Deleted!");
+                }
+                return NotFound($"Not Found student with id={id}");
+            }
+            catch (System.Exception e)
+            {
+                return BadRequest($"Invalid Request {e.Message}");
+            }
+        }
     }
 }

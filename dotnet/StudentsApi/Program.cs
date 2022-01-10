@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using StudentsApi.Context;
-using Microsoft.Extensions.Configuration;
 using StudentsApi.Services;
 
 // public IConfiguration Configuration { get; }
