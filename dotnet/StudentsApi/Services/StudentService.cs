@@ -1,32 +1,57 @@
+using Microsoft.EntityFrameworkCore;
+using StudentsApi.Context;
 using StudentsApi.Models;
 
 namespace StudentsApi.Services
 {
     public class StudentService : IStudentService
     {
-        public Task<IEnumerable<Student>> GetStudents()
+        private readonly AppDbContext _context;
+
+        public StudentService(AppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
-        public Task<Student> GetStudent(int id)
+
+        public async Task<IEnumerable<Student>> GetStudents()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _context.Students.ToListAsync(); 
+            }
+            catch
+            {                
+                throw;
+            }
         }
-        public Task<IEnumerable<Student>> GetStudentByName(string name)
+        public async Task<Student> GetStudent(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Students.FindAsync(id);
         }
-        public Task CreateStudent(Student student)
+        public async Task<IEnumerable<Student>> GetStudentByName(string name)
         {
-            throw new NotImplementedException();
+            IEnumerable<Student> students;
+            if (!string.IsNullOrWhiteSpace(name))
+                students = await _context.Students.Where(n => n.Name.Contains(name)).ToListAsync();
+            else
+                students = await GetStudents();
+
+            return students;
         }
-        public Task UpdateStudent(Student student)
+        public async Task CreateStudent(Student student)
         {
-            throw new NotImplementedException();
+            _context.Students.Add(student);
+            await _context.SaveChangesAsync();
         }
-        public Task DeleteStudent(Student student)
+        public async Task UpdateStudent(Student student)
         {
-            throw new NotImplementedException();
+            _context.Entry(student).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+        public async Task DeleteStudent(Student student)
+        {
+            _context.Students.Remove(student);
+            await _context.SaveChangesAsync();
         }
     }
 }
