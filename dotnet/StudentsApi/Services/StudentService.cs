@@ -26,7 +26,8 @@ namespace StudentsApi.Services
         }
         public async Task<Student> GetStudent(int id)
         {
-            return await _context.Students.FindAsync(id);
+            var students = await _context.Students.FindAsync(id); 
+            return students;
         }
         public async Task<IEnumerable<Student>> GetStudentByName(string name)
         {
