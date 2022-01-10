@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using StudentsApi.Context;
 using Microsoft.Extensions.Configuration;
+using StudentsApi.Services;
 
 // public IConfiguration Configuration { get; }
 
@@ -14,6 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IStudentService, StudentService>();
 
 var app = builder.Build();
 
