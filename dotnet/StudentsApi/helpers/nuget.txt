@@ -1,0 +1,2 @@
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 6.0.1

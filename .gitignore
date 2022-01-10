@@ -4,3 +4,5 @@ __pycache__
 dotnet/NacktBank/*/bin/
 dotnet/NacktBank/*/obj/
 OtherBank
+dotnet/StudentsApi/*/bin/
+dotnet/StudentsApi/*/obj/
