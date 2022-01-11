@@ -1,14 +1,16 @@
-﻿using NacktBank.AgencySystem.helpers;
+﻿using NacktBank.Models.CurrentAccounts;
 
-string URL = "https://www.byteddbank.com.br/exchange?originCurrency=real&destinyCurrency=dolar&value=1500";
+CurrentAccount fabioAcc = new CurrentAccount(123,4242);
+Client fabio = new Client();
+fabio.Name = "Fabio Marturano";
+fabio.CPF = "123.123.123-5";
+fabio.Occupation = "Dev";
 
-try
-{
-    extratorArgumentsByUrl urlFull = new extratorArgumentsByUrl(URL);  
-    System.Console.WriteLine(urlFull.Arguments);
-    System.Console.WriteLine(urlFull.GetValue("value"));
-}
-catch (System.Exception e)
-{
-    System.Console.WriteLine(e.Message);
-}
+Client fabio2 = new Client();
+fabio2.Name = "Fabio Marturano";
+fabio2.CPF = "123.123.123-5";
+fabio2.Occupation = "Dev";
+
+System.Console.WriteLine(fabioAcc);
+System.Console.WriteLine(fabio.Equals(fabio2));
+System.Console.WriteLine(fabio.Equals(fabioAcc));

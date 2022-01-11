@@ -71,5 +71,9 @@ namespace NacktBank.Models.CurrentAccounts
             }
 
         }
+        public override string ToString()
+        {
+            return $"{Agency}, {Account}, {Balance}";
+        }
     }
 }
