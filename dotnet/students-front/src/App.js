@@ -23,16 +23,16 @@ function App() {
   return (
     <div className="App">
         <header>
-          <h3>Fabio Marturano</h3>
-          <button className='bnt btn-success'>Add Student</button>
+          <h3>student registration</h3>
+          <button className='btn btn-success'>Add</button>
         </header>
         <table className='table table-bordered'>
           <thead>
-            <tr>Id</tr>
-            <tr>Name</tr>
-            <tr>Email</tr>
-            <tr>Age</tr>
-            <tr>Operation</tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Operation</th>
           </thead>
           <tbody>
             {
@@ -42,6 +42,10 @@ function App() {
                   <td>{name}</td>
                   <td>{email}</td>
                   <td>{age}</td>
+                  <td>
+                    <button className='btn btn-primary'>Edit</button>
+                    <button className='btn btn-danger'>Dell</button>
+                  </td>
                 </tr>
               ))
             }
