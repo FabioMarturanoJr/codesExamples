@@ -6,3 +6,4 @@ dotnet/NacktBank/*/obj/
 OtherBank
 dotnet/StudentsApi/bin/
 dotnet/StudentsApi/obj/
+dotnet/students-front/node_modules
