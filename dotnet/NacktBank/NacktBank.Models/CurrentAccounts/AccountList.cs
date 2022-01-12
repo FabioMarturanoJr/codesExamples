@@ -4,6 +4,8 @@ namespace NacktBank.Models.CurrentAccounts
     {
         private CurrentAccount[] _account;
         private int _nextPosition;
+        public int TotalAccounts { get { return _nextPosition; } }
+
         public AccountList(int nextPosition = 0, int inicialCapacity = 5)
         {
             _account = new CurrentAccount[inicialCapacity];
@@ -11,10 +13,16 @@ namespace NacktBank.Models.CurrentAccounts
         }
         public void Add(CurrentAccount account) {
             VerifyCapacity(_nextPosition + 1);
-            System.Console.WriteLine($"add position {_nextPosition}");
+            // System.Console.WriteLine($"add position {_nextPosition}");
 
             _account[_nextPosition] = account;
             _nextPosition++;
+        }
+        public void AddMoreThanOne(params CurrentAccount[] accounts) {
+            foreach (CurrentAccount account in accounts)
+            {
+                Add(account);
+            }
         }
         public void Remove(CurrentAccount account) {
             int indexAccount = -1;
@@ -37,8 +45,14 @@ namespace NacktBank.Models.CurrentAccounts
         public void List() {
             for (int i = 0; i < _nextPosition; i++)
             {
-                System.Console.WriteLine($"{i}: {_account[i]}");
+                // System.Console.WriteLine($"{i}: {_account[i]}");
             }
+        }
+        public CurrentAccount GetCurrentAccountByIndex(int index) {
+            if(index < 0 || index >= _nextPosition)
+                throw new ArgumentOutOfRangeException(nameof(index));
+
+            return _account[index];
         }
         private void VerifyCapacity(int requiredSize) {
             if(_account.Length >= requiredSize) return;
@@ -49,16 +63,21 @@ namespace NacktBank.Models.CurrentAccounts
                 newLength = requiredSize;
             }
 
-            System.Console.WriteLine($"increase Size");
+            // System.Console.WriteLine($"increase Size");
             CurrentAccount[] newAccount = new CurrentAccount[newLength];
             
             for (int i = 0; i < _account.Length; i++)
             {
                 newAccount[i] = _account[i];
-                System.Console.WriteLine('.');
+                // System.Console.WriteLine('.');
             }
-
             _account = newAccount;
+        }
+        public CurrentAccount this[int index] {
+            get 
+            {
+                return GetCurrentAccountByIndex(index);
+            }
         }
     }
 }
