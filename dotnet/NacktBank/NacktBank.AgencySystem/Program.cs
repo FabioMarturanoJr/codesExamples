@@ -1,12 +1,13 @@
-﻿using NacktBank.Models.CurrentAccounts;
+﻿using NacktBank.AgencySystem.helpers;
+using NacktBank.Models.CurrentAccounts;
 
-AccountList list = new AccountList(inicialCapacity: 6);
+AccountList accountList = new AccountList(inicialCapacity: 6);
 
 CurrentAccount fabio = new CurrentAccount(555,4444);
 
-list.Add(fabio);
-list.Add(new CurrentAccount(123,1111));
-list.Add(new CurrentAccount(123,2222));
+accountList.Add(fabio);
+accountList.Add(new CurrentAccount(123,1111));
+accountList.Add(new CurrentAccount(123,2222));
 
 CurrentAccount[] accounts = new CurrentAccount[] {
     new CurrentAccount(123,2222),
@@ -18,9 +19,9 @@ CurrentAccount[] accounts = new CurrentAccount[] {
     new CurrentAccount(123,8888),
 };
 
-list.AddMoreThanOne(accounts);
+accountList.AddMoreThanOne(accounts);
 
-list.AddMoreThanOne(
+accountList.AddMoreThanOne(
     new CurrentAccount(123,2222),
     new CurrentAccount(123,3333),
     new CurrentAccount(123,4444),
@@ -33,7 +34,20 @@ list.AddMoreThanOne(
 // list.Remove(fabio);
 // list.List();
 
-for (int i = 0; i < list.TotalAccounts; i++)
+for (int i = 0; i < accountList.TotalAccounts; i++)
 {
-    System.Console.WriteLine(list[i]);
+    System.Console.WriteLine(accountList[i]);
+}
+
+System.Console.WriteLine("=====================================================");
+
+AlmonstGenericList agesList = new AlmonstGenericList();
+
+agesList.AddMoreThanOne(20,15,40,30, "fabio");
+
+agesList.List();
+
+for (int i = 0; i < agesList.TotalItems; i++)
+{   
+    System.Console.WriteLine(agesList[i]);
 }
