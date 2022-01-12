@@ -75,5 +75,13 @@ namespace NacktBank.Models.CurrentAccounts
         {
             return $"{Agency}, {Account}, {Balance}";
         }
+        public override bool Equals(object? obj)
+        {
+            CurrentAccount objAccout = obj as CurrentAccount;
+
+            if (objAccout == null) return false;
+
+            return Account == objAccout.Account && Agency == objAccout.Agency;
+        }
     }
 }

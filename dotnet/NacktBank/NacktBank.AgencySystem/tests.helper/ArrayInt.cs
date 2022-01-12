@@ -18,3 +18,16 @@
 // System.Console.WriteLine(resultWithWhile);
 // System.Console.WriteLine(resultWithReducer);
 // System.Console.WriteLine(ages[3]);
+
+
+
+// CurrentAccount[] accounts = new CurrentAccount[] {
+//     new CurrentAccount(123, 123456),
+//     new CurrentAccount(123, 654321),
+//     new CurrentAccount(123, 111111)
+// };
+
+// foreach (var acc in accounts)
+// {
+//     System.Console.WriteLine(acc);
+// }
