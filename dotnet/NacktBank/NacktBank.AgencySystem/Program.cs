@@ -51,3 +51,11 @@ for (int i = 0; i < agesList.TotalItems; i++)
 {   
     System.Console.WriteLine(agesList[i]);
 }
+
+System.Console.WriteLine("=====================================================");
+
+GenericList<Client> clients = new GenericList<Client>();
+
+GenericList<string> names = new GenericList<string>();
+
+names.Add("fabio");
