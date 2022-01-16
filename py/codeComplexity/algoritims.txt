@@ -1,0 +1,7 @@
+- Constantes: O(1)
+- Logarítmicos: O(log n)
+- Linear: O(n)
+- Quadráticos: O(n²)
+- Cúbicos: O(n³)
+- Exponencial: O(2ⁿ)
+- Fatorial: O(n!)
