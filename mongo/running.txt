@@ -31,3 +31,7 @@ desativar o início automático
 instalação mongoSh
 
 https://docs.mongodb.com/mongodb-shell/install/#std-label-mdb-shell-install
+
+usar mongodb
+
+- mongosh
