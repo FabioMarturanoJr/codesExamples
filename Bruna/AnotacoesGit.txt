@@ -1,0 +1,29 @@
+- clonar no projeto 
+	git clone url
+
+- clonar uma branch
+	git checkout -b nomeDaBranch
+
+- salvar o arquivo
+	crtl s
+
+- verificar as modificações
+	git status
+
+- adicionar a modificação
+	git add referencia do arquivo
+
+- comitar modificação
+	git commit -m "minha mensagem"
+
+- sincronizar do repositorio local para o repositorio remoto
+	git push
+
+- sincronizar do repositorio remoto para o local
+	git pull
+
+- listar as branches
+	git branch --list
+
+- apagar branch do repositorio local
+	 git branch -d nomeDaBranch
