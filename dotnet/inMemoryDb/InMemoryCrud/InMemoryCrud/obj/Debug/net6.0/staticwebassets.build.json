@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Gnor/LZ5kF85FCuOMl1yXFBe6gI+zdh8LRQEMki4cQM=",
+  "Source": "InMemoryCrud.Api",
+  "BasePath": "_content/InMemoryCrud.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

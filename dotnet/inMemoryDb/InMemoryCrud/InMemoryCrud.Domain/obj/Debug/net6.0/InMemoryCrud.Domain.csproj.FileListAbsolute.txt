@@ -1,0 +1,12 @@
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\bin\Debug\net6.0\InMemoryCrud.Domain.deps.json
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\bin\Debug\net6.0\InMemoryCrud.Domain.dll
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\bin\Debug\net6.0\InMemoryCrud.Domain.pdb
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\InMemoryCrud.Domain.csproj.AssemblyReference.cache
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\InMemoryCrud.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\InMemoryCrud.Domain.AssemblyInfoInputs.cache
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\InMemoryCrud.Domain.AssemblyInfo.cs
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\InMemoryCrud.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\InMemoryCrud.Domain.dll
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\refint\InMemoryCrud.Domain.dll
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\InMemoryCrud.Domain.pdb
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.Domain\obj\Debug\net6.0\ref\InMemoryCrud.Domain.dll

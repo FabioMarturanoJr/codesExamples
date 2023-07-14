@@ -1,0 +1,15 @@
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\bin\Debug\net6.0\InMemoryCrud.AutoMapper.deps.json
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\bin\Debug\net6.0\InMemoryCrud.AutoMapper.dll
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\bin\Debug\net6.0\InMemoryCrud.AutoMapper.pdb
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\bin\Debug\net6.0\InMemoryCrud.Domain.dll
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\bin\Debug\net6.0\InMemoryCrud.Domain.pdb
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\InMemoryCrud.AutoMapper.csproj.AssemblyReference.cache
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\InMemoryCrud.AutoMapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\InMemoryCrud.AutoMapper.AssemblyInfoInputs.cache
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\InMemoryCrud.AutoMapper.AssemblyInfo.cs
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\InMemoryCrud.AutoMapper.csproj.CoreCompileInputs.cache
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\InMemoryCrud.AutoMapper.csproj.CopyComplete
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\InMemoryCrud.AutoMapper.dll
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\refint\InMemoryCrud.AutoMapper.dll
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\InMemoryCrud.AutoMapper.pdb
+C:\Projetos\codesExamples\dotnet\inMemoryDb\InMemoryCrud\InMemoryCrud.AutoMapper\obj\Debug\net6.0\ref\InMemoryCrud.AutoMapper.dll
