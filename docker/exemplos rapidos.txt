@@ -1,0 +1,13 @@
+docker run -d --hostname my-rabbit --name some-rabbit -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+"amqps://user:password@localhost:5672"
+
+
+docker run -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root -p 27017:27017 mongo
+ mongodb://root:root@localhost:27017/admin
+
+docker build -t my-img .
+docker run -t -p 8080:8080 -e ASPNETCORE_ENVIRONMENT=Homologation --restart=unless-stopped my-img
+
+
+docker build -t app-in-memory-img .
+docker run -t -p 8080:80 -e ASPNETCORE_ENVIRONMENT=Development --restart=unless-stopped app-in-memory-img

@@ -35,3 +35,8 @@ https://docs.mongodb.com/mongodb-shell/install/#std-label-mdb-shell-install
 usar mongodb
 
 - mongosh
+
+mongo docker quick
+
+docker run -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root -p 27017:27017 mongo
+mongodb://root:root@localhost:27017/admin

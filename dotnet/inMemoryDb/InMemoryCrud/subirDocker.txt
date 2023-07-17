@@ -1,0 +1,2 @@
+docker build -t app-in-memory-img .
+docker run -t -p 8080:80 -e ASPNETCORE_ENVIRONMENT=Development --restart=unless-stopped app-in-memory-img
