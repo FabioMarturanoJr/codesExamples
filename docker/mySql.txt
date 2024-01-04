@@ -1,0 +1,11 @@
+docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=root -v ~/mysql-data:/var/lib/mysql -p 3306:3306 mysql/mysql-server
+
+docker exec -it mysql mysql -u root -p
+
+select user, host from mysql.user
+
+update mysql.user set host='%' where user='root';
+
+FLUSH PRIVILEGES;
+
+allowPublicKeyRetrieval true dbeaver

@@ -1,0 +1,17 @@
+-- rodar 
+	go run .\main.go
+
+-- buildar
+ 	go build .\main.go
+
+-- gerar no /bin
+	go install
+
+-- variaveis 
+	go env
+
+	go env -w GO111MODULE=auto
+
+
+-- baixar pacotes
+	go get github.com/google/uuid
